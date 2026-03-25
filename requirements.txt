@@ -6,3 +6,5 @@ notebook
 jupyter
 matplotlib
 seaborn
+sentence-transformers
+tabulate
