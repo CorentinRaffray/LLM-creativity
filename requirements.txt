@@ -1,3 +1,8 @@
 pandas
 pyarrow
 fastparquet
+scikit-learn
+notebook
+jupyter
+matplotlib
+seaborn
