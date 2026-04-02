@@ -2,10 +2,12 @@
 
 ## 1) Proposition d'un ensemble de métriques
 
-Cette partie introduit le cadre théorique du problème de l'évaluation de la créativité des modèles de langage. Nous y définissons une mesure de la créativité fondée sur des principes théoriques rigoureux, que nous confrontons ensuite à des annotations humaines afin d'en évaluer la pertinence. Les coefficients de pondération de cette métrique sont dans un premier temps déterminés analytiquement, en s'appuyant sur des arguments théoriques motivés. Afin de ne pas se limiter à cette seule justification formelle, nous procédons également à une validation empirique : une dizaine de combinaisons alternatives de coefficients ont été systématiquement testées et comparées, confirmant que le choix théorique initial se révèle être la configuration la plus judicieuse au regard des données.
+Cette partie introduit le cadre théorique du problème de l'évaluation de la créativité des modèles de langage. Nous y définissons une mesure de la créativité fondée sur des principes théoriques rigoureux, que nous confrontons ensuite à des annotations humaines afin d'en évaluer la pertinence. Les coefficients de pondération de cette métrique sont dans un premier temps déterminés analytiquement, en s'appuyant sur des arguments théoriques motivés.  
+Afin de ne pas se limiter à cette seule justification formelle, nous procédons également à une validation empirique : une dizaine de combinaisons alternatives de coefficients ont été systématiquement testées et comparées, confirmant que le choix théorique initial se révèle être la configuration la plus judicieuse au regard des données.
 
 ## 2) Fiabilité des jugements humains
 À partir des données de compar:IA, chaque session de vote est réalisée par un seul utilisateur qui compare simultanément deux modèles, il est donc impossible de mesurer l'accord inter-annotateurs au sens classique. De plus, seulement 30,9% des conversations reçoivent un vote. Les conversations votées sont systématiquement plus longues (+38% de tokens en médiane) et sur-représentent certaines thématiques engageantes (Environment, Food, Culture), au détriment des usages transactionnels courts.  
+  
 Le signal creative est donc bruité, en raison à la fois de la subjectivité du concept et de son taux de base très faible. De plus, tout classement construit sur ces votes (type Bradley-Terry) mesure la performance sur un sous-échantillon biaisé et va favoriser les réponses longues et les sujets engageants.
 
 ## 3) Classement par le modèle de Bradley-Terry
