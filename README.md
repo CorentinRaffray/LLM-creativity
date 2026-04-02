@@ -9,6 +9,15 @@ Cette partie introduit le cadre théorique du problème de l'évaluation de la c
 Le signal creative est donc bruité, en raison à la fois de la subjectivité du concept et de son taux de base très faible. De plus, tout classement construit sur ces votes (type Bradley-Terry) mesure la performance sur un sous-échantillon biaisé et va favoriser les réponses longues et les sujets engageants.
 
 ## 3) Classement par le modèle de Bradley-Terry
+
+Dans cette partie,on construit un classement des modèles à partir de comparaisons par paires en utilisant le modèle de Bradley-Terry. Le score de chaque modèle est estimé à partir des duels gagnés/perdus, d'abord sur l'ensemble global des votes (hors ex-aequo), puis sur le sous-ensemble ciblé "créativité". On retient un seuil minimal de confrontations (`N=30`) pour limiter l'instabilité liée aux modèles trop peu observés.
+
+La comparaison entre classement global et classement créativité montre une forte cohérence générale, mais aussi des déplacements de rang qui indiquent que certains modèles sont relativement plus performants sur les prompts créatifs que sur l'usage moyen (et vis-versa). Puis on étudie l'effet des ex-aequo avec une extension de Davidson.
+
+Enfin, une version enrichie du modèle avec covariables (longueur, catégorie, nombre de tours) confirme qu'une partie des écarts observés dépend du contexte d'évaluation. Certaines catégories ont une importance anormale mais en regardant de plus près elles sont très largement sous représentées (quelques votes seulement).
+
+
+
 ## 4) Biais systématique dans les données
 Nous nous sommes par la suite intéressés aux éventuels biais qui pourraient expliquer des déséquilibres dans le choix du modèle favori par l'utilisateur, ou des biais qui pourraient entrainer davantage de réactions. En particulier, nous avons étudié le biais de longueur, c'est à dire, vérifier si la longueur de la conversation guide le choix de l'utilisateur, et nous avons également étudié le biais de position, afin de déterminer si la position dans laquelle la conversation était présentée à l'utilisateur engendrait une différence dans les réactions reçues. 
 Dans le cas du biais de longueur, il est apparu que seule une très faible corrélation existait, une conversation plus longue de 100 tokens a seulement 2% de chance supplémentaire d'être choisie. 
